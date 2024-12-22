@@ -5,8 +5,8 @@ import { FaUser } from "react-icons/fa"
 import { Link } from "react-router-dom"
 const Header = () => {
     return (
-        <Box className="w-full px-8 bg-gray-100 sticky top-0">
-            <Box className="w-full flex h-16 relative" gap={4}>
+        <Box className="w-full bg-gray-100 sticky top-0 z-50 h-16">
+            <Box className="px-8 w-full flex h-16 relative" gap={4}>
                 <Box className="h-16 w-32 flex justify-center">
                     <Box
                         component={'img'}
