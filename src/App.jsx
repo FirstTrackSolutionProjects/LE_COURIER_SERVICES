@@ -9,10 +9,12 @@ import Footer from './components/Footer'
 import Pricing from './pages/Pricing'
 import Tracking from './pages/Tracking'
 import ContactUs from './pages/ContactUs'
+import MobileNav from './components/MobileNav'
 const App = () => {
   return (
     <>
       <Header />
+      <MobileNav />
       <Box className="h-[calc(100vh - 64px)] w-full overflow-hidden">
         <Routes>
           <Route exact path="/" element={<Welcome />} />
