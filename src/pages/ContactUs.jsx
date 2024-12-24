@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   contactInfo: {
-    backgroundColor: '#0000ff',
+    backgroundColor: '#003366',
     color: '#ffffff',
     padding: '2rem',
     borderRadius: '8px',
