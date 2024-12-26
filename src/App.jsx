@@ -10,6 +10,7 @@ import Pricing from './pages/Pricing'
 import Tracking from './pages/Tracking'
 import ContactUs from './pages/ContactUs'
 import MobileNav from './components/MobileNav'
+import FAQs from './FAQs'
 const App = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/tracking" element={<Tracking />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/faq" element={<FAQs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
