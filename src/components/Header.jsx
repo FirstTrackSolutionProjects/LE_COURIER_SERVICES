@@ -9,12 +9,14 @@ const Header = () => {
         <Box className="w-full bg-gray-100 sticky top-0 z-50 h-16">
             <Box className="px-8 w-full flex h-16 relative" gap={4}>
                 <Box className="h-16 w-32 flex justify-center">
-                    <Box
-                        component={'img'}
-                        alt="Logo"
-                        src="/logo.svg"
-                        className="h-full"
-                    />
+                    <Link to={'/'}>
+                        <Box
+                            component={'img'}
+                            alt="Logo"
+                            src="/logo.svg"
+                            className="h-full"
+                        />
+                    </Link>
                 </Box>
                 <Box className={`${isSmall?'hidden':'flex'} items-center font-semibold`} gap={4}>
                     {headerNavItems.map((item) => (
