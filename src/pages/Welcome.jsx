@@ -57,7 +57,7 @@ function Welcome() {
           >
             <Typography variant="h6" style={{ color: '#c70000', fontWeight: 'bold' }}>Fast Delivery</Typography>
             <Typography style={{ color: '#666' }}>
-              Ensure your parcels reach their destination in record time.
+              Ensure your parcels reach safely and securely at their destination in record time.
             </Typography>
           </Box>
         </Grid>
