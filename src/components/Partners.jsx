@@ -13,21 +13,13 @@ const Partners = () => {
     autoplay: true,
     autoplaySpeed: 3000,
   };
-
-//   const images = [
-//     "images/partners/bluedart.jpeg",
-//     "images/partners/delhivery.jpeg",
-//     "images/partners/dhl.jpeg",
-//     "images/partners/Ecom.png",
-//     "images/partners/gati.png",
-//     "images/partners/xpress.jpeg",
-//   ];
+  
   const images = [
-    "logo.svg",
-        "logo.svg",
-                "logo.svg",
-                                "logo.svg",
-                                    
+    "/partners/delhivery.jpeg",
+    "/partners/gati.png",
+    "/partners/aws.avif",
+    "/partners/netlify.png",
+    "/partners/zoho.jpeg"
   ]
 
   return (
