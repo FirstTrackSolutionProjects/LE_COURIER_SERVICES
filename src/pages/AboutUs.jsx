@@ -89,7 +89,7 @@ const AboutUs = () => {
           </Typography>
         </Box>
 
-        <Typography variant="h4" align="center" className={classes.header} style={{ marginTop: '2rem' }}>
+        {/* <Typography variant="h4" align="center" className={classes.header} style={{ marginTop: '2rem' }}>
           Meet Our Team
         </Typography>
 
@@ -109,7 +109,7 @@ const AboutUs = () => {
               </Card>
             </Grid>
           ))}
-        </Grid>
+        </Grid> */}
       </Container>
     </div>
   );
