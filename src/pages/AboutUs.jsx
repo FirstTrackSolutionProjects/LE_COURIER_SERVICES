@@ -32,7 +32,7 @@ const useStyles = makeStyles(() => ({
     color: '#333333',
   },
   section: {
-    backgroundColor: '#0000ff',
+    backgroundColor: '#003366',
     color: '#ffffff',
     padding: '2rem',
     marginTop: '2rem',
