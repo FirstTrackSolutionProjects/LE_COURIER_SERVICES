@@ -1,16 +1,28 @@
 import React, { useState } from 'react';
 const faqs = [
   {
+    question: 'What is LE COURIER SERVICES?',
+    answer: 'LE COURIER SERVICES appears to be a delivery service, possibly a specialized or expedited courier service that emphasizes speed and efficiency in delivering packages. Services with similar names typically focus on providing rapid delivery solutions, often catering to e-commerce businesses, urgent shipments, or high-priority deliveries.'
+  },
+  {
+    question: 'How do I contact you?',
+    answer: `Check for a customer service phone number on their website. This is often the quickest way to get immediate help or provide an email address for customer inquiries. This can be found on their website or in any communication you've received from them.`
+  },
+  {
+    question: 'Will i get full refund on cancellation of order?',
+    answer: 'Yes, Full amount will be Refundable.'
+  },
+  {
     question: 'What is your return policy?',
     answer: 'Our return policy allows you to return items within 30 days of purchase for a full refund.'
   },
   {
     question: 'How do I track my order?',
-    answer: 'You can track your order by logging into your account and visiting the "Orders" section.'
+    answer: 'You can track your order by logging into your account and visiting the "Shipment Reports" section.'
   },
   {
     question: 'Do you offer international shipping?',
-    answer: 'Yes, we offer international shipping to most countries. Shipping fees may vary based on the destination.'
+    answer: 'No, we do not offer international shipping.'
   },
 ];
 
