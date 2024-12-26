@@ -59,8 +59,8 @@ const PrivacyPolicy = () => {
           If you have any questions about this Privacy Policy, please contact us at: 
         </p>
         <ul className="list-disc list-inside mb-4">
-          <li>Email: info@7dexpress.com</li>
-          <li>Address: Room No 356, Floor-G, Shahid Bhagat Singh Nagar, Sant Gora, Kumbhar Road, 5th Kumbharwada, Sec 2, Dharavi, Mumbai, Maharashtra, India-400017</li>
+          <li>Email: info@lecourier.com</li>
+          <li>Address: 123 Logistics Street, Cityname, Country-PIN</li>
         </ul>
 
        

@@ -103,7 +103,7 @@ const ContactUs = () => {
                 <strong>Phone:</strong> +1 (234) 567-890
               </Typography>
               <Typography variant="body1" className={classes.infoText}>
-                <strong>Email:</strong> support@logistics.com
+                <strong>Email:</strong> support@lecourier.com
               </Typography>
               <Typography variant="body1" className={classes.infoText}>
                 <strong>Working Hours:</strong> Mon-Fri: 9 AM - 6 PM

@@ -12,6 +12,7 @@ import ContactUs from './pages/ContactUs'
 import MobileNav from './components/MobileNav'
 import FAQs from './components/FAQs'
 import PrivacyPolicy from './components/PrivacyPolicy'
+import TermsOfUse from './components/TermsOfUse'
 const App = () => {
   return (
     <>
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/faq" element={<FAQs />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfUse />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
