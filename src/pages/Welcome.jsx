@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Box, Typography, Button, Grid } from '@mui/material';
 import Partners from '../components/Partners';
+import { useNavigate } from 'react-router-dom';
 
 function Welcome() {
+  const navigate = useNavigate();
   return (
     <>
     <Container maxWidth="" style={{ padding: '2rem', backgroundColor: '#f4f4f4', minHeight: 'calc(100vh - 64px)', display:'flex', flexDirection:'column', justifyContent:'center' }}>
@@ -34,13 +36,15 @@ function Welcome() {
       {/* Call to Action Buttons */}
       <Box display="flex" justifyContent="center" gap={2} marginBottom="4rem">
         <Button 
-          variant="contained" 
+          variant="contained"
+          onClick={()=>navigate('/about-us')} 
           style={{ backgroundColor: '#c70000', color: '#fff', padding: '0.8rem 2rem' }}
         >
           Learn More
         </Button>
         <Button 
           variant="outlined" 
+          onClick={()=>navigate('/contact-us')} 
           style={{ borderColor: '#003366', color: '#003366', padding: '0.8rem 2rem' }}
         >
           Contact Us
