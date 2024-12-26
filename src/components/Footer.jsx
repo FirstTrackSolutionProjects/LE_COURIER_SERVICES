@@ -25,8 +25,8 @@ const Footer = () =>{
             <h2 className="text-xl font-bold mb-4 hover:underline">Quick Links</h2>
             <ul>
               <li><Link to="/faq" onClick={scrollToTop} >FAQs</Link></li>
-              <li><Link to="/about" onClick={scrollToTop} >About Us</Link></li>
-              <li><Link to="/contact" onClick={scrollToTop} >Contact Us</Link></li>
+              <li><Link to="/about-us" onClick={scrollToTop} >About Us</Link></li>
+              <li><Link to="/contact-us" onClick={scrollToTop} >Contact Us</Link></li>
               <li><Link to="/privacy" onClick={scrollToTop} >Privacy & Policy</Link></li>
               <li><Link to="/terms" onClick={scrollToTop} >Terms of Use</Link></li>
             </ul>
