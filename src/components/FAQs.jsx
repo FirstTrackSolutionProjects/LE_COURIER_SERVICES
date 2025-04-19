@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 const faqs = [
   {
-    question: 'What is LE COURIER SERVICES?',
-    answer: 'LE COURIER SERVICES appears to be a delivery service, possibly a specialized or expedited courier service that emphasizes speed and efficiency in delivering packages. Services with similar names typically focus on providing rapid delivery solutions, often catering to e-commerce businesses, urgent shipments, or high-priority deliveries.'
+    question: 'What is ADI COURIER SERVICES?',
+    answer: 'ADI COURIER SERVICES appears to be a delivery service, possibly a specialized or expedited courier service that emphasizes speed and efficiency in delivering packages. Services with similar names typically focus on providing rapid delivery solutions, often catering to e-commerce businesses, urgent shipments, or high-priority deliveries.'
   },
   {
     question: 'How do I contact you?',

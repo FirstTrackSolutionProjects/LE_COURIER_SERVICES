@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Grid, TextField, Button, Card, CardContent, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import contactImage from '/contact-image.jpg';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -43,6 +44,14 @@ const ContactUs = () => {
   return (
     <div className={classes.root}>
       <Container maxWidth="md">
+
+          {/* Image */}
+                <img
+                  src={contactImage}
+                  alt="Contact Us Banner"
+                  className={classes.image}
+                />
+        
         <Typography variant="h3" className={classes.header}>
           Contact Us
         </Typography>
@@ -103,7 +112,7 @@ const ContactUs = () => {
                 <strong>Phone:</strong> +1 (234) 567-890
               </Typography>
               <Typography variant="body1" className={classes.infoText}>
-                <strong>Email:</strong> support@lecourier.com
+                <strong>Email:</strong> support@adicourier.com
               </Typography>
               <Typography variant="body1" className={classes.infoText}>
                 <strong>Working Hours:</strong> Mon-Fri: 9 AM - 6 PM
