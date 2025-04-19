@@ -1,3 +1,6 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export const headerNavItems = Object.freeze([
     {
         label: 'Home',
@@ -18,5 +21,9 @@ export const headerNavItems = Object.freeze([
     {
         label: 'Contact Us',
         to: '/contact-us'
+    },
+    {
+        label: 'Sign In',
+        to: '/sign-in'
     }
 ])
