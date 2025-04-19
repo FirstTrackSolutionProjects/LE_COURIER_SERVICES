@@ -83,7 +83,7 @@ const Footer = () => {
               {/* <div className="mb-4">
                 <img src="/logo1.png" alt="ADI Courier Logo" className="w-28 h-auto" />
               </div> */}
-              <h2 className="text-xl font-bold mb-2 hover:underline">ADI COURIER SERVICES</h2>
+              <h2 className="text-xl font-serif mb-2 hover:underline font-extrabold">ADI COURIER SERVICES</h2>
               <p className="pr-4">
                 Delivering excellence in logistics solutions entire PAN India.
                 <br /> Your reliable partner for domestic shipping services.
