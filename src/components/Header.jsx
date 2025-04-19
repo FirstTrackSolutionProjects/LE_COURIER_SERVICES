@@ -13,7 +13,7 @@ const Header = () => {
                         <Box
                             component={'img'}
                             alt="Logo"
-                            src="/logo.svg"
+                            src="/logo1.png"
                             className="h-full"
                         />
                     </Link>
@@ -33,4 +33,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;

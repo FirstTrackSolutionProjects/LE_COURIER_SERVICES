@@ -9,11 +9,11 @@ function Welcome() {
     <>
     <Container maxWidth="" style={{ padding: '2rem', backgroundColor: '#f4f4f4', minHeight: 'calc(100vh - 64px)', display:'flex', flexDirection:'column', justifyContent:'center' }}>
       {/* Logo Section */}
-      <Box display="flex" justifyContent="center" marginBottom="2rem">
+      <Box display="flex" justifyContent="center">
         <img 
-          src="/logo.svg" 
+          src="/logo1.png" 
           alt="LE Courier Services Logo" 
-          style={{ maxWidth: '300px', height: 'auto' }} 
+          style={{ maxWidth: '250px', height: 'auto' }} 
         />
       </Box>
 
@@ -23,7 +23,7 @@ function Welcome() {
         align="center" 
         style={{ fontWeight: 'bold', color: '#c70000', marginBottom: '1rem' }}
       >
-        Welcome to LE Courier Services
+        Welcome to ADI Courier Services
       </Typography>
       <Typography 
         variant="h5" 

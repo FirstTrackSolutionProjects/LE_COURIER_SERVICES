@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
           If you have any questions about this Privacy Policy, please contact us at: 
         </p>
         <ul className="list-disc list-inside mb-4">
-          <li>Email: info@lecourier.com</li>
+          <li>Email: info@adicourier.com</li>
           <li>Address: 123 Logistics Street, Cityname, Country-PIN</li>
         </ul>
 
