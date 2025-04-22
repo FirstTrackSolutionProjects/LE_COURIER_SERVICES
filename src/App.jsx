@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 // import Welcome from './pages/Welcome'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
+import BlogPage from './pages/BlogPage'
 import SignIn from './pages/SignIn'
 import Register from './pages/Register'
 import NotFound from './pages/NotFound'
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/tracking" element={<Tracking />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/register" element={<Register />} />

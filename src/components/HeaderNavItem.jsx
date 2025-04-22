@@ -18,6 +18,7 @@ const HeaderNavItem = ({ item }) => {
                         bottom: -2,
                         width: 0,
                         height: '2px',
+                       
                         backgroundColor: '#000000',
                         transition: 'width 0.3s ease-in-out',
                     },

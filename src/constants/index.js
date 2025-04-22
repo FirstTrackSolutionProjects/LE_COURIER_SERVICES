@@ -19,6 +19,10 @@ export const headerNavItems = Object.freeze([
         to: '/about-us'
     },
     {
+        label: 'Blog',
+        to: '/blog'
+    },
+    {
         label: 'Contact Us',
         to: '/contact-us'
     },

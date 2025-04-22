@@ -7,31 +7,31 @@ const testimonials = [
     name: 'John Doe',
     role: 'CEO, TechFlow Inc.',
     feedback: 'First Track transformed our shipping process. Their platform is fast, reliable, and incredibly user-friendly.',
-    avatar: '/images/avatar1.jpg',
+    avatar: '/male.jpg',
   },
   {
     name: 'Sarah Lin',
     role: 'Operations Manager, GlobalGoods',
     feedback: 'We’ve experienced outstanding service and prompt deliveries. Highly recommended!',
-    avatar: '/images/avatar2.jpg',
+    avatar: '/female.jpg',
   },
   {
     name: 'Carlos Rivera',
     role: 'Logistics Lead, E-Marketplace',
     feedback: 'The best logistics partner we’ve worked with. Seamless integrations and great customer support.',
-    avatar: '/images/avatar3.jpg',
+    avatar: '/female.jpg',
   },
   {
     name: 'Emma Thompson',
     role: 'Marketing Head, Innovators Co.',
     feedback: 'Their services have exceeded our expectations. Smooth operations and fantastic support!',
-    avatar: '/images/avatar4.jpg',
+    avatar: '/female.jpg',
   },
   {
     name: 'Michael Jordan',
     role: 'Founder, MJ Enterprises',
     feedback: 'First Track has been a game-changer for our business. We trust them with all our deliveries.',
-    avatar: '/images/avatar5.jpg',
+    avatar: '/male.jpg',
   },
 ];
 
