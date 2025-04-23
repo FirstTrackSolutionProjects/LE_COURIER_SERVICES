@@ -18,9 +18,10 @@ const MobileNav = () => {
             }
             <Box className={`${isNavOpen?'w-40': 'w-0'} z-50 bg-gray-200 fixed top-16 right-0 overflow-hidden transition-all duration-500 `}>
                 <Box className='w-40 p-4 space-y-2 flex flex-col text-xl'>
-                    {headerNavItems.map((item)=>(
-                        <HeaderNavItem item={item} onClick={()=>setIsNavOpen(false)} />
+                  {headerNavItems.map((item) => (
+                         <HeaderNavItem key={item.id} item={item} onClick={() => setIsNavOpen(false)} />
                     ))}
+
                 </Box>
             </Box>
         </>
