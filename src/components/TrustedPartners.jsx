@@ -208,12 +208,28 @@ const partners = [
     logo: '/partners/gati.png',
   },
   {
-    name: 'Netlify',
-    logo: '/partners/netlify.png',
+    name: 'BlueDart',
+    logo: '/partners/bluedart.jpg',
+  },
+  {
+    name: 'Razorpay',
+    logo: '/partners/razorpay.png',
   },
   {
     name: 'Zoho',
     logo: '/partners/zoho.jpeg',
+  },
+  {
+    name: 'DHL',
+    logo: '/partners/dhl.png',
+  },
+  {
+    name: 'Ecom Express',
+    logo: '/partners/ecom-express.png',
+  },
+  {
+    name: 'XpressBees',
+    logo: '/partners/xpressbees.png',
   },
   // Add more partners if needed
 ];
@@ -279,11 +295,9 @@ const TrustedPartners = () => {
               alt={partner.name}
               sx={{
                 height: 100,
-                maxWidth: 120,
                 width: 'auto',
                 backgroundColor: 'white',
                 borderRadius: 2,
-                p: 1.5,
                 boxShadow: 2,
                 transition: 'transform 0.3s',
                 '&:hover': {

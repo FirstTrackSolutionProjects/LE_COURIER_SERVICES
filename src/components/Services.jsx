@@ -8,23 +8,23 @@ import AssessmentIcon from '@mui/icons-material/Assessment';
 const services = [
   {
     icon: <TrendingUpIcon fontSize="large" color="primary" />,
-    title: 'Business Consulting',
-    description: 'Strategic advice to help your company grow and reach its full potential.',
+    title: 'Supply Chain Optimization',
+    description: 'Enhance efficiency across your supply chain with smart analytics and expert planning.',
   },
   {
     icon: <ComputerIcon fontSize="large" color="primary" />,
-    title: 'IT Solutions',
-    description: 'Reliable and customized technology services for your business needs.',
+    title: 'Real-Time Tracking',
+    description: 'Monitor shipments with GPS and IoT for complete visibility and faster deliveries.',
   },
   {
     icon: <SecurityIcon fontSize="large" color="primary" />,
-    title: 'Cybersecurity',
-    description: 'Protect your data and systems with our comprehensive cybersecurity solutions.',
+    title: 'Customs & Compliance',
+    description: 'Simplify global shipping with automated compliance checks and customs documentation.',
   },
   {
     icon: <AssessmentIcon fontSize="large" color="primary" />,
-    title: 'Market Research',
-    description: 'In-depth market analysis to guide your business decisions and strategy.',
+    title: 'Warehouse Solutions',
+    description: 'Maximize space and streamline fulfillment with intelligent warehouse management.',
   },
 ];
 
