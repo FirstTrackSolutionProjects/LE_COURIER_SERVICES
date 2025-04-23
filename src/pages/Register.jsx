@@ -40,7 +40,7 @@ const useStyles = makeStyles(() => ({
       color: '#000000',
     },
     input: {
-      marginBottom: '1.2rem', // adds vertical spacing
+      marginBottom: '26px', // adds vertical spacing
     },
     button: {
       marginTop: '1rem',
@@ -74,8 +74,8 @@ const Register = () => {
 
         <Card className={classes.card}>
           <CardContent>
-            <Typography variant="h4" className={classes.title}>
-              Create Account
+          <Typography variant="h4" sx={{ textAlign: 'center', mb: 4, color: '#000000' }}>
+             Create Account
             </Typography>
 
             <TextField
@@ -83,6 +83,7 @@ const Register = () => {
               label="Full Name"
               variant="outlined"
               className={classes.input}
+              sx={{ mb: 3 }}
             />
 
             <TextField
@@ -91,6 +92,7 @@ const Register = () => {
               variant="outlined"
               type="tel"
               className={classes.input}
+              sx={{ mb: 3 }}
             />
 
             <TextField
@@ -99,6 +101,7 @@ const Register = () => {
               variant="outlined"
               type="email"
               className={classes.input}
+              sx={{ mb: 3 }}
             />
 
             <TextField
@@ -107,6 +110,7 @@ const Register = () => {
               variant="outlined"
               type="password"
               className={classes.input}
+              sx={{ mb: 3 }}
             />
 
             <TextField
@@ -115,6 +119,16 @@ const Register = () => {
               variant="outlined"
               type="password"
               className={classes.input}
+              sx={{ mb: 3 }}
+            />
+
+            <TextField
+              fullWidth
+              label="Business Name"
+              variant="outlined"
+              type="Business Name"
+              className={classes.input}
+              sx={{ mb: 3 }}
             />
 
             <Button fullWidth variant="contained" className={classes.button}>
@@ -123,7 +137,8 @@ const Register = () => {
 
             <Box className={classes.linkBox}>
                 <Typography variant="body2">
-                    Already have an account? <a href="/signin">Sign In</a>
+                Already have an account? <a href="/sign-in" style={{ color: 'red', fontWeight:'bold' }}>Sign In</a>
+
              </Typography>
             </Box>
 

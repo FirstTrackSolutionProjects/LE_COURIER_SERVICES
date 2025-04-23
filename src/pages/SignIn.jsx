@@ -74,6 +74,7 @@ const SignIn = () => {
               variant="outlined"
               type="email"
               className={classes.formControl}
+              sx={{ mb: 3 }}
             />
             <TextField
               fullWidth
@@ -81,6 +82,7 @@ const SignIn = () => {
               variant="outlined"
               type="password"
               className={classes.formControl}
+              sx={{ mb: 3 }}
             />
 
             <Button
