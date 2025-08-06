@@ -1,150 +1,88 @@
 import React from 'react';
-import {
-  Container,
-  Typography,
-  TextField,
-  Button,
-  Card,
-  CardContent,
-  Box
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
-import registerImage from '/register-image.jpg'; // 🔁 Update with correct image path
-
-const useStyles = makeStyles(() => ({
-    root: {
-      backgroundColor: '#ffffff',
-      padding: '3rem 0',
-      minHeight: '100vh',
-    },
-    image: {
-        width: '100%',
-        maxHeight: '250px',
-        objectFit: 'cover',
-        borderRadius: '12px',
-        marginBottom: '2rem', // ✅ Already there
-      },
-    card: {
-        backgroundColor: '#f9f9f9',
-        border: '1px solid #e0e0e0',
-        borderRadius: '12px',
-        maxWidth: 500,
-        margin: '2rem auto 0 auto', // ✅ Adds space from image
-        padding: '2rem',
-        boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.08)',
-      },
-      
-    title: {
-      textAlign: 'center',
-      marginBottom: '1.5rem',
-      color: '#000000',
-    },
-    input: {
-      marginBottom: '26px', // adds vertical spacing
-    },
-    button: {
-      marginTop: '1rem',
-      backgroundColor: '#003366',
-      color: '#ffffff',
-      '&:hover': {
-        backgroundColor: '#002244',
-      },
-    },
-    linkBox: {
-      marginTop: '1.5rem',
-      textAlign: 'center',
-    },
-  }));
-  
-  
-  
+import registerImage from '/register-image.jpg';
 
 const Register = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <Container maxWidth="sm">
-        {/* 🔽 Add top image like Sign In page */}
+    <div className="bg-white min-h-screen py-12">
+      <div className="max-w-md mx-auto px-4">
+        {/* Top Image */}
         <img
           src={registerImage}
           alt="Register Banner"
-          className={classes.image}
+          className="w-full max-h-64 object-cover rounded-xl mb-8"
         />
 
-        <Card className={classes.card}>
-          <CardContent>
-          <Typography variant="h4" sx={{ textAlign: 'center', mb: 4, color: '#000000' }}>
-             Create Account
-            </Typography>
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-lg">
+          <h2 className="text-3xl font-bold text-center text-black mb-6">Create Account</h2>
 
-            <TextField
-              fullWidth
-              label="Full Name"
-              variant="outlined"
-              className={classes.input}
-              sx={{ mb: 3 }}
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="Full Name"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
 
-            <TextField
-              fullWidth
-              label="Phone Number"
-              variant="outlined"
-              type="tel"
-              className={classes.input}
-              sx={{ mb: 3 }}
-            />
+             <div className="flex space-x-2">
+              <select
+                className="w-1/5 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">STD Code</option>
+                  <option value="+91">+91 (India)</option>
+                  <option value="+1">+1 (USA)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+61">+61 (Australia)</option>
+                  <option value="+81">+81 (Japan)</option>
+                </select>
+            
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="w-4/5 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
 
-            <TextField
-              fullWidth
-              label="Email"
-              variant="outlined"
+            <input
               type="email"
-              className={classes.input}
-              sx={{ mb: 3 }}
+              placeholder="Email"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
 
-            <TextField
-              fullWidth
-              label="Password"
-              variant="outlined"
+            <input
               type="password"
-              className={classes.input}
-              sx={{ mb: 3 }}
+              placeholder="Password"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
 
-            <TextField
-              fullWidth
-              label="Confirm Password"
-              variant="outlined"
+            <input
               type="password"
-              className={classes.input}
-              sx={{ mb: 3 }}
+              placeholder="Confirm Password"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
 
-            <TextField
-              fullWidth
-              label="Business Name"
-              variant="outlined"
-              type="Business Name"
-              className={classes.input}
-              sx={{ mb: 3 }}
+            <input
+              type="text"
+              placeholder="Business Name"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
 
-            <Button fullWidth variant="contained" className={classes.button}>
+            <button
+              type="submit"
+              className="w-full bg-blue-900 text-white font-semibold py-3 rounded-md hover:bg-blue-950 transition"
+            >
               Register
-            </Button>
+            </button>
+          </form>
 
-            <Box className={classes.linkBox}>
-                <Typography variant="body2">
-                Already have an account? <a href="/sign-in" style={{ color: 'red', fontWeight:'bold' }}>Sign In</a>
-
-             </Typography>
-            </Box>
-
-          </CardContent>
-        </Card>
-      </Container>
+          <div className="text-center mt-6">
+            <p className="text-sm text-gray-700">
+              Already have an account?{' '}
+              <a href="/sign-in" className="text-red-600 font-semibold hover:underline">
+                Sign In
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

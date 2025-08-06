@@ -1,28 +1,24 @@
 import React from 'react';
-import { Box, Grid, Typography, Paper } from '@mui/material';
-import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
-import LockIcon from '@mui/icons-material/Lock';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import { FaThumbsUp, FaLock, FaClock, FaHeadset } from 'react-icons/fa';
 
 const features = [
   {
-    icon: <ThumbUpAltIcon fontSize="large" color="primary" />,
+    icon: <FaThumbsUp className="text-blue-500 text-3xl" />,
     title: 'Trusted Reputation',
     description: 'Proven excellence backed by customer satisfaction.',
   },
   {
-    icon: <LockIcon fontSize="large" color="primary" />,
+    icon: <FaLock className="text-blue-500 text-3xl" />,
     title: 'Advanced Security',
     description: 'Protecting packages with state-of-the-art systems.',
   },
   {
-    icon: <AccessTimeIcon fontSize="large" color="primary" />,
+    icon: <FaClock className="text-blue-500 text-3xl" />,
     title: 'On-Time Commitment',
     description: 'Deliveries that arrive when they’re supposed to.',
   },
   {
-    icon: <SupportAgentIcon fontSize="large" color="primary" />,
+    icon: <FaHeadset className="text-blue-500 text-3xl" />,
     title: 'Live Assistance',
     description: 'Real-time help whenever you need it.',
   },
@@ -30,37 +26,22 @@ const features = [
 
 const ChooseUs = () => {
   return (
-    <Box sx={{ py: 8, px: 4, backgroundColor: '#fff' }}>
-      <Typography variant="h4" fontWeight="bold" align="center" gutterBottom>
-        Why Choose Us
-      </Typography>
+    <div className="bg-white py-16 px-4">
+      <h2 className="text-3xl font-bold text-center mb-10">Why Choose Us</h2>
 
-      <Grid container spacing={4} justifyContent="center" mt={2}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {features.map((feature, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
-            <Paper
-              elevation={3}
-              sx={{
-                p: 4,
-                textAlign: 'center',
-                borderRadius: 3,
-                backgroundColor: '#f9fafb',
-                transition: '0.3s',
-                '&:hover': { boxShadow: 6 },
-              }}
-            >
-              <Box mb={2}>{feature.icon}</Box>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                {feature.title}
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                {feature.description}
-              </Typography>
-            </Paper>
-          </Grid>
+          <div
+            key={index}
+            className="bg-gray-100 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+          >
+            <div className="mb-4 flex justify-center">{feature.icon}</div>
+            <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+            <p className="text-sm text-gray-600">{feature.description}</p>
+          </div>
         ))}
-      </Grid>
-    </Box>
+      </div>
+    </div>
   );
 };
 

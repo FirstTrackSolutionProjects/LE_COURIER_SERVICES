@@ -21,10 +21,10 @@
 //       }}
 //     >
 //       <Container maxWidth="md" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', borderRadius: 3, p: 4 }}>
-//         {/* <img src="/logo.png" alt="ADI Courier Services" style={{ maxWidth: '150px', marginBottom: '1.5rem' }} /> */}
+//         {/* <img src="/logo.png" alt="Ship Runway Services" style={{ maxWidth: '150px', marginBottom: '1.5rem' }} /> */}
 
 //         <Typography variant="h3" fontWeight="bold" gutterBottom>
-//           Welcome to ADI Courier Services
+//           Welcome to Ship Runway Services
 //         </Typography>
 //         <Typography variant="h6" sx={{ mb: 4 }}>
 //           Your Trusted Logistics Partner
@@ -102,7 +102,7 @@ const HeroSection = () => {
         sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', borderRadius: 3, p: 4 }}
       >
         <Typography variant="h3" fontWeight="bold" gutterBottom>
-          Welcome to ADI Courier Services
+          Welcome to Ship Runway Services
         </Typography>
         <Typography variant="h6" sx={{ mb: 4 }}>
           Your Trusted Logistics Partner

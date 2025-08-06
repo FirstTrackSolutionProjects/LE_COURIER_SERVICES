@@ -1,56 +1,52 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
 
 const Offer = () => {
   return (
-    <Box py={10} px={3} bgcolor="#fff">
-      <Typography variant="h4" align="center" fontWeight="bold" color="primary" gutterBottom>
+    <div className="py-10 px-4 bg-white">
+      <h2 className="text-3xl font-bold text-center text-black mb-6">
         What We Offer
-      </Typography>
+      </h2>
 
-      <Grid container spacing={6} justifyContent="center" mt={4}>
-        <Grid item xs={12} md={6}>
-        <Box textAlign="center">
-            <Box mb={2}>
-              <img
-                src="/international shipping.jpg" // replace with your actual image path
-                alt="International Shipping"
-                style={{ width: '100%', maxHeight: 250, objectFit: 'contain' }}
-              />
-            </Box>
-            <Typography variant="h5" fontWeight="bold" color="orange" gutterBottom>
-              International Shipping
-            </Typography>
-            <Typography variant="body1" color="textPrimary">
-              Take your business across borders with ease. Our international logistics solutions are designed
-              to handle complex shipping requirements while ensuring timely and secure deliveries. From
-              managing customs regulations to providing real-time visibility, we make cross-border shipping
-              hassle-free and efficient.
-            </Typography>
-          </Box>
-        </Grid>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-6">
+        {/* International Shipping */}
+        <div className="text-center">
+          <div className="mb-4">
+            <img
+              src="/international shipping.jpg" // Replace with actual image path
+              alt="International Shipping"
+              className="w-full object-contain mx-auto"
+            />
+          </div>
+          {/* Uncomment to add text below image */}
+          {/* 
+          <h3 className="text-xl font-semibold text-orange-500 mb-2">International Shipping</h3>
+          <p className="text-gray-700">
+            Take your business across borders with ease. Our international logistics solutions are designed
+            to handle complex shipping requirements while ensuring timely and secure deliveries. From
+            managing customs regulations to providing real-time visibility, we make cross-border shipping
+            hassle-free and efficient.
+          </p>
+          */}
+        </div>
 
-        <Grid item xs={12} md={6}>
-        <Box textAlign="center">
-            <Box mb={2}>
-              <img
-                src="/domestic shipping.jpg" // replace with your actual image path
-                alt="Domestic Shipping"
-                style={{ width: '100%', maxHeight: 250, objectFit: 'contain' }}
-              />
-            </Box>
-            <Typography variant="h5" fontWeight="bold" color="orange" gutterBottom>
-              Domestic Shipping
-            </Typography>
-            <Typography variant="body1" color="textPrimary">
-              We simplify domestic logistics with tailored delivery services that keep your business agile.
-              Whether you need fast last-mile delivery, reliable freight transport, or streamlined scheduling,
-              our domestic shipping solutions are built to maximize efficiency and reliability from start to finish.
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
+        {/* Domestic Shipping */}
+        <div className="text-center">
+          <div className="mb-4">
+            <img
+              src="/domestic shipping.jpg" // Replace with actual image path
+              alt="Domestic Shipping"
+              className="w-full  object-contain mx-auto"
+            />
+          </div>
+          <h3 className="text-2xl font-bold text-blue-500 mb-2">Domestic Shipping</h3>
+          <p className="text-gray-700">
+            We simplify domestic logistics with tailored delivery services that keep your business agile.
+            Whether you need fast last-mile delivery, reliable freight transport, or streamlined scheduling,
+            our domestic shipping solutions are built to maximize efficiency and reliability from start to finish.
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
