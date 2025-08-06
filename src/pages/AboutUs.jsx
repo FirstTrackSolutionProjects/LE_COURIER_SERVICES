@@ -1,266 +1,61 @@
-// import React from 'react';
-// import { Container, Typography, Grid, Card, CardContent, Avatar, Box } from '@mui/material';
-// import { makeStyles } from '@mui/styles';
-
-// const useStyles = makeStyles(() => ({
-//   root: {
-//     backgroundColor: '#ffffff',
-//     padding: '2rem 0',
-//   },
-//   header: {
-//     color: '#000000',
-//     textAlign: 'center',
-//     marginBottom: '1.5rem',
-//   },
-//   subHeader: {
-//     color: '#000000',
-//     textAlign: 'center',
-//     marginBottom: '2rem',
-//   },
-//   card: {
-//     backgroundColor: '#f9f9f9',
-//     border: '1px solid #e0e0e0',
-//   },
-//   avatar: {
-//     backgroundColor: '#ff0000',
-//     margin: '0 auto',
-//   },
-//   title: {
-//     color: '#000000',
-//   },
-//   description: {
-//     color: '#333333',
-//   },
-//   section: {
-//     backgroundColor: '#003366',
-//     color: '#ffffff',
-//     padding: '2rem',
-//     marginTop: '2rem',
-//     borderRadius: '8px',
-//   },
-// }));
-
-// const AboutUs = () => {
-//   const classes = useStyles();
-
-//   return (
-//     <div className={classes.root}>
-//       <Container maxWidth="lg">
-//         <Typography variant="h3" className={classes.header}>
-//           About Us
-//         </Typography>
-//         <Typography variant="h6" className={classes.subHeader}>
-//           Delivering Excellence in Domestic Logistics
-//         </Typography>
-
-//         <Grid container spacing={4}>
-//           <Grid item xs={12} md={6}>
-//             <Card className={classes.card}>
-//               <CardContent>
-//                 <Typography variant="h5" className={classes.title}>
-//                   Our Mission
-//                 </Typography>
-//                 <Typography variant="body1" className={classes.description}>
-//                   To revolutionize domestic logistics by connecting businesses and customers through innovative technology and exceptional service. We ensure efficiency, transparency, and reliability in every shipment.
-//                 </Typography>
-//               </CardContent>
-//             </Card>
-//           </Grid>
-//           <Grid item xs={12} md={6}>
-//             <Card className={classes.card}>
-//               <CardContent>
-//                 <Typography variant="h5" className={classes.title}>
-//                   Our Vision
-//                 </Typography>
-//                 <Typography variant="body1" className={classes.description}>
-//                   To be the leading domestic logistics aggregator, empowering businesses and individuals with seamless, cost-effective, and eco-friendly delivery solutions.
-//                 </Typography>
-//               </CardContent>
-//             </Card>
-//           </Grid>
-//         </Grid>
-
-//         <Box className={classes.section}>
-//           <Typography variant="h4" align="center" gutterBottom>
-//             Why Choose Us?
-//           </Typography>
-//           <Typography variant="body1" align="center">
-//             We bring together a network of trusted logistics providers, cutting-edge tracking systems, and unparalleled customer support to ensure your parcels are delivered on time, every time.
-//           </Typography>
-//         </Box>
-
-//         {/* <Typography variant="h4" align="center" className={classes.header} style={{ marginTop: '2rem' }}>
-//           Meet Our Team
-//         </Typography>
-
-//         <Grid container spacing={4} justifyContent="center">
-//           {["John Doe", "Jane Smith", "Alice Johnson", "Bob Brown"].map((name, index) => (
-//             <Grid item xs={12} sm={6} md={3} key={index}>
-//               <Card className={classes.card}>
-//                 <CardContent>
-//                   <Avatar className={classes.avatar}>{name[0]}</Avatar>
-//                   <Typography variant="h6" align="center" className={classes.title}>
-//                     {name}
-//                   </Typography>
-//                   <Typography variant="body2" align="center" className={classes.description}>
-//                     {index % 2 === 0 ? "Logistics Expert" : "Customer Relations Specialist"}
-//                   </Typography>
-//                 </CardContent>
-//               </Card>
-//             </Grid>
-//           ))}
-//         </Grid> */}
-//       </Container>
-//     </div>
-//   );
-// };
-
-// export default AboutUs;
-
 import React from 'react';
-import {
-  Container,
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  Avatar,
-  Box
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
-import aboutImage from '/about-image.jpg'; // Make sure the image is in this path
-
-const useStyles = makeStyles(() => ({
-  root: {
-    backgroundColor: '#ffffff',
-    padding: '2rem 0',
-  },
-  header: {
-    color: '#000000',
-    textAlign: 'center',
-    marginBottom: '1.5rem',
-  },
-  subHeader: {
-    color: '#000000',
-    textAlign: 'center',
-    marginBottom: '2rem',
-  },
-  card: {
-    backgroundColor: '#f9f9f9',
-    border: '1px solid #e0e0e0',
-  },
-  avatar: {
-    backgroundColor: '#ff0000',
-    margin: '0 auto',
-  },
-  title: {
-    color: '#000000',
-    marginBottom: '0.5rem',
-  },
-  description: {
-    color: '#333333',
-  },
-  section: {
-    backgroundColor: '#003366',
-    color: '#ffffff',
-    padding: '2rem',
-    marginTop: '2rem',
-    borderRadius: '8px',
-  },
-  image: {
-    width: '100%',
-    maxHeight: '400px',
-    objectFit: 'cover',
-    borderRadius: '8px',
-    marginBottom: '2rem',
-  }
-}));
+import aboutImage from '/about-image.jpg'; // Update the path if necessary
 
 const AboutUs = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <Container maxWidth="lg">
-
-        {/* Image */}
+    <div className="bg-white py-8">
+      <div className="container mx-auto px-4">
+        {/* Banner Image */}
         <img
           src={aboutImage}
           alt="About Us Banner"
-          className={classes.image}
+          className="w-full max-h-[400px] object-cover rounded-lg mb-8"
         />
 
-        {/* Title & Subtitle */}
-        <Typography variant="h3" className={classes.header}>
-          About Us
-        </Typography>
-        <Typography variant="h6" className={classes.subHeader}>
+        {/* Main Title */}
+        <h1 className="text-4xl font-bold text-center text-black mb-4">About Us</h1>
+        <p className="text-xl text-center text-black mb-8">
           Delivering Excellence in Domestic Logistics
-        </Typography>
+        </p>
+
+        {/* Company Overview Section */}
+        <div className="bg-gray-100 border border-gray-200 rounded-lg p-6 mb-8">
+  
+          <p className="text-gray-800">
+            <strong> Rameshwar Cargo India Pvt. Ltd.</strong>, founded in <strong>June 2023</strong>, is a fast-growing logistics company <strong> Ship Runway</strong> dedicated to providing
+            seamless and efficient domestic delivery solutions across India. With a focus on innovation and customer satisfaction, we’ve
+            become a trusted logistics aggregator that bridges businesses and customers through smart, reliable, and cost-effective services.
+          </p>
+        </div>
 
         {/* Mission and Vision Cards */}
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <Card className={classes.card}>
-              <CardContent>
-                <Typography variant="h5" className={classes.title}>
-                  Our Mission
-                </Typography>
-                <Typography variant="body1" className={classes.description}>
-                  To revolutionize domestic logistics by connecting businesses and customers through innovative technology and exceptional service. We ensure efficiency, transparency, and reliability in every shipment.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Card className={classes.card}>
-              <CardContent>
-                <Typography variant="h5" className={classes.title}>
-                  Our Vision
-                </Typography>
-                <Typography variant="body1" className={classes.description}>
-                  To be the leading domestic logistics aggregator, empowering businesses and individuals with seamless, cost-effective, and eco-friendly delivery solutions.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-gray-100 border border-gray-200 rounded-lg p-6">
+            <h2 className="text-2xl font-semibold text-black mb-2">Our Mission</h2>
+            <p className="text-gray-800">
+              To revolutionize domestic logistics by connecting businesses and customers through innovative technology and exceptional service. 
+              We ensure efficiency, transparency, and reliability in every shipment.
+            </p>
+          </div>
+
+          <div className="bg-gray-100 border border-gray-200 rounded-lg p-6">
+            <h2 className="text-2xl font-semibold text-black mb-2">Our Vision</h2>
+            <p className="text-gray-800">
+              To be the leading domestic logistics aggregator, empowering businesses and individuals with seamless, cost-effective, 
+              and eco-friendly delivery solutions.
+            </p>
+          </div>
+        </div>
 
         {/* Why Choose Us Section */}
-        <Box className={classes.section}>
-          <Typography variant="h4" align="center" gutterBottom>
-            Why Choose Us?
-          </Typography>
-          <Typography variant="body1" align="center">
-            We bring together a network of trusted logistics providers, cutting-edge tracking systems, and unparalleled customer support to ensure your parcels are delivered on time, every time.
-          </Typography>
-        </Box>
-
-        {/* Optional Team Section (commented out) */}
-        {/*
-        <Typography variant="h4" align="center" className={classes.header} style={{ marginTop: '2rem' }}>
-          Meet Our Team
-        </Typography>
-
-        <Grid container spacing={4} justifyContent="center">
-          {["John Doe", "Jane Smith", "Alice Johnson", "Bob Brown"].map((name, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
-              <Card className={classes.card}>
-                <CardContent>
-                  <Avatar className={classes.avatar}>{name[0]}</Avatar>
-                  <Typography variant="h6" align="center" className={classes.title}>
-                    {name}
-                  </Typography>
-                  <Typography variant="body2" align="center" className={classes.description}>
-                    {index % 2 === 0 ? "Logistics Expert" : "Customer Relations Specialist"}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-        */}
-      </Container>
+        <div className="bg-blue-900 text-white text-center p-8 rounded-lg mt-10">
+          <h2 className="text-3xl font-bold mb-4">Why Choose Us?</h2>
+          <p className="text-lg">
+            We bring together a network of trusted logistics providers, cutting-edge tracking systems, 
+            and unparalleled customer support to ensure your parcels are delivered on time, every time.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,129 +1,93 @@
 import React from 'react';
-import { Container, Typography, Grid, TextField, Button, Card, CardContent, Box } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import contactImage from '/contact-image.jpg';
 
-const useStyles = makeStyles(() => ({
-  root: {
-    backgroundColor: '#ffffff',
-    padding: '2rem 0',
-  },
-  header: {
-    color: '#000000',
-    textAlign: 'center',
-    marginBottom: '1.5rem',
-  },
-  form: {
-    marginTop: '1rem',
-  },
-  textField: {
-    marginBottom: '1rem',
-  },
-  submitButton: {
-    backgroundColor: '#ff0000',
-    color: '#ffffff',
-    '&:hover': {
-      backgroundColor: '#cc0000',
-    },
-  },
-  contactInfo: {
-    backgroundColor: '#003366',
-    color: '#ffffff',
-    padding: '2rem',
-    borderRadius: '8px',
-    marginTop: '2rem',
-  },
-  infoText: {
-    marginBottom: '0.5rem',
-  },
-}));
-
 const ContactUs = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <Container maxWidth="md">
+    <div className="bg-white py-10 px-4 sm:px-6 lg:px-8">
+      {/* Top Image */}
+      <div className="max-w-4xl mx-auto mb-8">
+        <img
+          src={contactImage}
+          alt="Contact Us"
+          className="w-full h-68 object-cover rounded-xl shadow-md"
+        />
+      </div>
 
-          {/* Image */}
-                <img
-                  src={contactImage}
-                  alt="Contact Us Banner"
-                  className={classes.image}
-                />
-        
-        <Typography variant="h3" className={classes.header}>
-          Contact Us
-        </Typography>
-        <Typography variant="h6" align="center">
+      {/* Heading */}
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold text-gray-900">Contact Us</h2>
+        <p className="text-lg text-gray-600 mt-2">
           We're here to help! Feel free to reach out to us with any questions or concerns.
-        </Typography>
+        </p>
+      </div>
 
-        <Grid container spacing={4} className={classes.form}>
-          <Grid item xs={12} md={6}>
-            <Card>
-              <CardContent>
-                <Typography variant="h5" gutterBottom>
-                  Send Us a Message
-                </Typography>
-                <form>
-                  <TextField
-                    label="Your Name"
-                    variant="outlined"
-                    fullWidth
-                    className={classes.textField}
-                  />
-                  <TextField
-                    label="Your Email"
-                    type="email"
-                    variant="outlined"
-                    fullWidth
-                    className={classes.textField}
-                  />
-                  <TextField
-                    label="Your Message"
-                    multiline
-                    rows={4}
-                    variant="outlined"
-                    fullWidth
-                    className={classes.textField}
-                  />
-                  <Button
-                    variant="contained"
-                    fullWidth
-                    className={classes.submitButton}
-                  >
-                    Submit
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </Grid>
+      {/* Form + Info */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Contact Form */}
+        <div className="bg-gray-100 rounded-xl shadow-md p-6">
+          <h3 className="text-xl font-semibold mb-4">Send Us a Message</h3>
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+            />
+             <div className="flex space-x-2">
+              <select
+                className="w-1/5 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+                >
+                  <option value="">STD Code</option>
+                  <option value="+91">+91 (India)</option>
+                  <option value="+1">+1 (USA)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+61">+61 (Australia)</option>
+                  <option value="+81">+81 (Japan)</option>
+                </select>
+            
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="w-4/5 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+              />
+            </div>
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+            />
+            <textarea
+              placeholder="Your Message"
+              rows="4"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+            ></textarea>
+            <button
+              type="submit"
+              className="w-full bg-red-600 text-white py-3 rounded-md font-semibold hover:bg-red-700 transition"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
 
-          <Grid item xs={12} md={6}>
-            <Box className={classes.contactInfo}>
-              <Typography variant="h5" gutterBottom>
-                Contact Information
-              </Typography>
-              <Typography variant="body1" className={classes.infoText}>
-                <strong>Address:</strong> 123 Logistics Street, Cityname, Country
-              </Typography>
-              <Typography variant="body1" className={classes.infoText}>
-                <strong>Phone:</strong> +1 (234) 567-890
-              </Typography>
-              <Typography variant="body1" className={classes.infoText}>
-                <strong>Email:</strong> support@adicourier.com
-              </Typography>
-              <Typography variant="body1" className={classes.infoText}>
-                <strong>Working Hours:</strong> Mon-Fri: 9 AM - 6 PM
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
+        {/* Contact Info */}
+        <div className="bg-blue-900 text-white rounded-xl shadow-md p-6">
+          <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+          <p className="mb-3">
+            <strong>Address:</strong> 19, Nav Vyapar Bhavan, 45 PD Mello Road,<br/> Next to ICICI Bank, Masjid East, Mumbai-400009
+          </p>
+          <p className="mb-3">
+            <strong>Phone:</strong> +91 1234567890
+          </p>
+          <p className="mb-3">
+            <strong>Email:</strong> info@shiprunway.com
+          </p>
+          <p className="mb-3">
+            <strong>Working Hours:</strong> Mon-Fri: 9 AM - 6 PM
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default ContactUs;
-

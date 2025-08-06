@@ -1,7 +1,7 @@
 import { Box, Typography, useMediaQuery } from "@mui/material"
 import { headerNavItems } from "../constants"
 import HeaderNavItem from "./HeaderNavItem"
-import { FaUser } from "react-icons/fa"
+// import { FaUser } from "react-icons/fa"
 import { Link } from "react-router-dom"
 const Header = () => {
     const isSmall = useMediaQuery('(max-width: 680px)')
@@ -13,8 +13,8 @@ const Header = () => {
                         <Box
                             component={'img'}
                             alt="Logo"
-                            src="/logo1.png"
-                            className="h-full"
+                            src="/logo.png"
+                            className="h-16 w-auto mr-12"
                         />
                     </Link>
                 </Box>

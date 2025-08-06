@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box, Typography, Paper, Stack } from '@mui/material';
 
 const stats = [
   {
@@ -18,34 +17,22 @@ const stats = [
 
 const Superiority = () => {
   return (
-    <Box sx={{ backgroundColor: '#f9fafa', py: 6, px: 2, textAlign: 'center' }}>
-      <Typography variant="h5" fontWeight="bold" color="green" mb={4}>
-        First Track Superiority
-      </Typography>
-      <Stack spacing={3} alignItems="center">
+    <div className="bg-[#f9fafa] py-10 px-4 text-center">
+      <h2 className="text-3xl font-bold mb-8">
+       <span className="text-blue-900">Ship</span> <span className="text-orange-700">Runway</span> Superiority
+      </h2>
+      <div className="flex flex-col items-center space-y-6">
         {stats.map((item, index) => (
-          <Paper
+          <div
             key={index}
-            elevation={2}
-            sx={{
-              width: '100%',
-              maxWidth: 500,
-              py: 3,
-              px: 2,
-              backgroundColor: '#e0e0e0',
-              borderRadius: 2,
-            }}
+            className="w-full max-w-md bg-gray-200 rounded-lg p-6 shadow-md"
           >
-            <Typography variant="h4" fontWeight="bold">
-              {item.number}
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-              {item.label}
-            </Typography>
-          </Paper>
+            <h3 className="text-3xl font-bold">{item.number}</h3>
+            <p className="text-gray-600 text-lg">{item.label}</p>
+          </div>
         ))}
-      </Stack>
-    </Box>
+      </div>
+    </div>
   );
 };
 

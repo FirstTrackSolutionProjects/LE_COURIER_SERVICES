@@ -1,106 +1,69 @@
 import React from 'react';
-import {
-  Container,
-  Typography,
-  TextField,
-  Button,
-  Card,
-  CardContent,
-  Box
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
-import signInImage from '/signin-image.jpg'; // Update the path as needed
-
-const useStyles = makeStyles(() => ({
-  root: {
-    backgroundColor: '#ffffff',
-    padding: '3rem 0',
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-  },
-  image: {
-    width: '100%',
-    maxHeight: '250px',
-    objectFit: 'cover',
-    borderRadius: '12px',
-    marginBottom: '2rem',
-  },
-  card: {
-    maxWidth: 500,
-    margin: '0 auto',
-    backgroundColor: '#f9f9f9',
-    border: '1px solid #e0e0e0',
-    borderRadius: '12px',
-    padding: '2rem 1.5rem',
-    boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.08)',
-  },
-  formControl: {
-    marginTop: '1.5rem', // increased spacing between inputs
-  },
-  button: {
-    marginTop: '2rem',
-    backgroundColor: '#003366',
-    color: '#fff',
-    padding: '0.75rem',
-    fontWeight: 'bold',
-    '&:hover': {
-      backgroundColor: '#002244',
-    },
-  },
-}));
+import signInImage from '/signin-image.jpg'; // Update the path accordingly
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <Container maxWidth="sm">
-        <img
-          src={signInImage}
-          alt="Sign In Banner"
-          className={classes.image}
-        />
+    <div className="min-h-screen flex items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8">
+        <div>
+          <img
+            className="w-full h-60 object-cover rounded-xl mb-6"
+            src={signInImage}
+            alt="Sign In Banner"
+          />
+        </div>
 
-        <Card className={classes.card}>
-          <CardContent>
-            <Typography variant="h5" align="center" gutterBottom>
-              Sign In
-            </Typography>
+        <div className="bg-gray-100 shadow-md rounded-xl p-8">
+          <h2 className="text-center text-2xl font-bold text-gray-800 mb-6">Sign In</h2>
 
-            <TextField
-              fullWidth
-              label="Email"
-              variant="outlined"
-              type="email"
-              className={classes.formControl}
-              sx={{ mb: 3 }}
-            />
-            <TextField
-              fullWidth
-              label="Password"
-              variant="outlined"
-              type="password"
-              className={classes.formControl}
-              sx={{ mb: 3 }}
-            />
+          <form className="space-y-6">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+            </div>
 
-            <Button
-              fullWidth
-              variant="contained"
-              className={classes.button}
-            >
-              Sign In
-            </Button>
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+            </div>
 
-            <Box mt={3} textAlign="center">
-              <Typography variant="body2">
-                Don't have an account? <a href="/register" style={{ color: 'red', fontWeight: 'bold' }}>Register here</a>
-              </Typography>
-            </Box>
-          </CardContent>
-        </Card>
-      </Container>
+            <div>
+              <button
+                type="submit"
+                className="w-full bg-blue-900 text-white py-3 rounded-md font-semibold hover:bg-blue-800 transition"
+              >
+                Sign In
+              </button>
+            </div>
+          </form>
+
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-700">
+              Don't have an account?{' '}
+              <Link to="/register" className="text-red-600 font-semibold hover:underline">
+                Register here
+              </Link>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,57 +1,50 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
 
 const AboutSection = () => {
   return (
-    <Box sx={{ backgroundColor: '#f0fffe', py: 8, px: 4 }}>
+    <div className="bg-[#f0fffe] py-16 px-4">
       {/* Mission */}
-      <Grid container spacing={4} alignItems="center" mb={6}>
-        <Grid item xs={12} md={6}>
-          <Typography variant="h6" color="green" fontWeight="bold" gutterBottom>
-            Our Mission
-          </Typography>
-          <Typography variant="body1">
+      <div className="flex flex-col md:flex-row items-center mb-12 gap-6">
+        <div className="w-full md:w-1/2">
+          <h2 className="text-green-600 font-bold text-xl mb-2">Our Mission</h2>
+          <p className="text-base">
             To revolutionize logistics with innovative technology, offering scalable and intelligent delivery
             solutions tailored for global businesses.
-          </Typography>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <img src="/about-1.jpg" alt="Tech Logistics" style={{ width: '100%', borderRadius: 8 }} />
-        </Grid>
-      </Grid>
+          </p>
+        </div>
+        <div className="w-full md:w-1/2">
+          <img src="/about-1.jpg" alt="Tech Logistics" className="w-full rounded-md" />
+        </div>
+      </div>
 
       {/* Vision */}
-      <Grid container spacing={4} alignItems="center" mb={6}>
-        <Grid item xs={12} md={6}>
-          <Typography variant="h6" color="green" fontWeight="bold" gutterBottom>
-            Our Vision
-          </Typography>
-          <Typography variant="body1">
+      <div className="flex flex-col md:flex-row items-center mb-12 gap-6">
+        <div className="w-full md:w-1/2">
+          <h2 className="text-green-600 font-bold text-xl mb-2">Our Vision</h2>
+          <p className="text-base">
             To become the world’s most trusted and intelligent logistics network, powered by data-driven systems
             and seamless connectivity.
-          </Typography>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <img src="/about-2.jpg" alt="Vision Warehouse" style={{ width: '100%', borderRadius: 8 }} />
-        </Grid>
-      </Grid>
+          </p>
+        </div>
+        <div className="w-full md:w-1/2">
+          <img src="/about-2.jpg" alt="Vision Warehouse" className="w-full rounded-md" />
+        </div>
+      </div>
 
       {/* Values */}
-      <Grid container spacing={4} alignItems="center">
-        <Grid item xs={12} md={6}>
-          <Typography variant="h6" color="green" fontWeight="bold" gutterBottom>
-            Our Values
-          </Typography>
-          <Typography variant="body1">
+      <div className="flex flex-col md:flex-row items-center gap-6">
+        <div className="w-full md:w-1/2">
+          <h2 className="text-green-600 font-bold text-xl mb-2">Our Values</h2>
+          <p className="text-base">
             Innovation, integrity, and excellence are at the heart of everything we do. We strive to deliver value
             with every shipment and build long-term partnerships through transparency and commitment.
-          </Typography>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <img src="/about-3.jpg" alt="Team Values" style={{ width: '100%', borderRadius: 8 }} />
-        </Grid>
-      </Grid>
-    </Box>
+          </p>
+        </div>
+        <div className="w-full md:w-1/2">
+          <img src="/about-3.jpg" alt="Team Values" className="w-full rounded-md" />
+        </div>
+      </div>
+    </div>
   );
 };
 
