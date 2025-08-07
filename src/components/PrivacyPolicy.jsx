@@ -60,7 +60,7 @@ const PrivacyPolicy = () => {
         </p>
         <ul className="list-disc list-inside mb-4">
           <li><strong>Email:</strong> info@shiprunway.com</li>
-          <li><strong>Address:</strong> 19, Nav Vyapar Bhavan, 45 PD Mello Road,<br/> Next to ICICI Bank, Masjid East, Mumbai-400009</li>
+          <li><strong>Address:</strong> 19, Nav Vyapar Bhavan, 45 PD Mello Road,<br/> Next to ICICI Bank, Masjid East, Mumbai-400009, Maharashtra</li>
         </ul>
       </div>
     </div>

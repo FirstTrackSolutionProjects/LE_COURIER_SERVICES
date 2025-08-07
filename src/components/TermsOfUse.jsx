@@ -7,7 +7,7 @@ const TermsOfUse = () => {
         <h1 className="text-4xl font-bold mb-6 text-center text-sky-950">Terms & Conditions</h1>
         
         <section className="mb-6">
-          <h2 className="text-2xl font-semibold mb-2">Welcome to Ship Runway SERVICES</h2>
+          <h2 className="text-2xl font-semibold mb-2">Welcome to Ship Runway Courier</h2>
           <p className="text-gray-700 mb-4">
             By accessing and using this website, you agree to be bound by the following terms and conditions of use, which together with our privacy policy govern our company's relationship with you in relation to this website.
           </p>
