@@ -10,7 +10,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-600 font-bold text-white p-8">
+    <footer className="bg-gray-500 font-bold text-black p-8">
       <div className="container mx-auto px-2">
         <div className="flex flex-wrap">
           {/* Company Info */}
@@ -20,7 +20,8 @@ const Footer = () => {
               <img src={logo} alt="Ship Runway Logo" className="w-28 h-auto" />
             </div> */}
             <h2 className="text-xl font-serif mb-2 hover:underline font-extrabold">
-              Ship Runway SERVICES
+               <span className="text-blue-700"> Ship</span>
+              <span className="text-orange-600"> Runway</span> Courier
             </h2>
             <p className="pr-4 font-normal">
               Delivering excellence in logistics solutions entire PAN India.
@@ -44,7 +45,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4">
             <h3 className="text-xl font-bold mb-4 hover:underline">Contact Us</h3>
             <p className="mb-2 pr-4">
-             Address: 19, Nav Vyapar Bhavan, 45 PD Mello Road,<br/> Next to ICICI Bank, Masjid East, Mumbai-400009
+             Address: 19, Nav Vyapar Bhavan, 45 PD Mello Road,<br/> Next to ICICI Bank, Masjid East, Mumbai-400009, Maharashtra
             </p>
             <p className="mt-3 mb-8 md:-mb-4">Email: info@shiprunway.com</p>
           </div>

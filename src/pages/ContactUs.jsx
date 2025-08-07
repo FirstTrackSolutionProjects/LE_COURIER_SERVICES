@@ -1,5 +1,6 @@
 import React from 'react';
 import contactImage from '/contact-image.jpg';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const ContactUs = () => {
   return (
@@ -33,23 +34,19 @@ const ContactUs = () => {
               className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
             />
              <div className="flex space-x-2">
-              <select
-                className="w-1/5 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
-                >
-                  <option value="">STD Code</option>
-                  <option value="+91">+91 (India)</option>
-                  <option value="+1">+1 (USA)</option>
-                  <option value="+44">+44 (UK)</option>
-                  <option value="+61">+61 (Australia)</option>
-                  <option value="+81">+81 (Japan)</option>
-                </select>
+               <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 bg-white">
+                <span className="text-xl mr-2">🇮🇳</span>
+                <span className="text-gray-800">+91</span>
+              </div>
             
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="w-4/5 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-5/6 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
+           
+  
             <input
               type="email"
               placeholder="Your Email"
@@ -84,10 +81,22 @@ const ContactUs = () => {
           <p className="mb-3">
             <strong>Working Hours:</strong> Mon-Fri: 9 AM - 6 PM
           </p>
+          
         </div>
       </div>
-    </div>
+          <a
+          href="https://wa.me/919040170727"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+        >
+           <FaWhatsapp size={24} />
+        </a>
+          </div>
+
+
   );
 };
 
 export default ContactUs;
+
