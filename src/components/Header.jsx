@@ -10,8 +10,8 @@ return (
     <header className="w-full bg-gray-100 sticky top-0 z-50 h-16 flex items-center px-4 shadow">
     <div className="flex items-center justify-between w-full mx-auto px-4">
         {/* Logo */}
-        <Link to="/" className="h-16 flex items-center">
-        <img src="/logo.png" alt="Logo" className="h-12 w-auto  sm:h-14" />
+        <Link to="/" className="h-20 flex items-center">
+        <img src="/logo.png" alt="Logo" className="h-16 w-auto sm:h-18" />
         </Link>
 
         {/* Desktop Navigation */}
