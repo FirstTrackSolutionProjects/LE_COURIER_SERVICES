@@ -10,7 +10,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-500 font-bold text-black p-8">
+    <footer className="bg-gray-300 font-bold text-black p-8">
       <div className="container mx-auto px-2">
         <div className="flex flex-wrap">
           {/* Company Info */}
@@ -61,6 +61,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+     
 
         <div className="mt-8 text-center">
           <p>Copyright©2025, Developed by First Track Solution Technologies</p>
