@@ -69,6 +69,15 @@ const Pricing = () => {
         onSubmit={handleSubmit}
         className="bg-gray-100 p-8 rounded-lg shadow-lg w-full max-w-2xl"
       >
+          {/* Image */}
+        <div className="flex justify-center mb-4">
+          <img
+            src="/pricing.jpg" 
+            alt="Shipping Banner"
+            className="w-full rounded-lg object-cover"
+          />
+        </div>
+
         <h2 className="text-2xl font-semibold text-center mb-6">
           Calculate Your Shipping Price
         </h2>
@@ -95,7 +104,8 @@ const Pricing = () => {
               onChange={handleChange}
               className="w-full border rounded p-2"
             >
-              <option value="Forward">RTO</option>
+              <option value="Forward">Forward</option>
+              <option value="RTO">RTO</option>
               <option value="Reverse">Reverse</option>
             </select>
           </div>

@@ -23,23 +23,18 @@ const Register = () => {
             />
 
              <div className="flex space-x-2">
-              <select
-                className="w-1/5 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">STD Code</option>
-                  <option value="+91">+91 (India)</option>
-                  <option value="+1">+1 (USA)</option>
-                  <option value="+44">+44 (UK)</option>
-                  <option value="+61">+61 (Australia)</option>
-                  <option value="+81">+81 (Japan)</option>
-                </select>
+               <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 bg-white">
+                <span className="text-xl mr-2">🇮🇳</span>
+                <span className="text-gray-800">+91</span>
+              </div>
             
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="w-4/5 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-5/6 border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
+           
 
             <input
               type="email"

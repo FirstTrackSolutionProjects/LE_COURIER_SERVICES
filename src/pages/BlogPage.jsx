@@ -1,74 +1,52 @@
-import { Box, Typography } from '@mui/material';
+import React from "react";
 
 const blogs = [
   {
-    title: 'Master Shipping Route Optimization',
-    date: 'January 10, 2025',
+    title: "Master Shipping Route Optimization",
+    date: "January 10, 2025",
     description:
-      'Take control of your logistics! Learn actionable strategies to optimize routes and boost efficiency.',
-    image: '/blog1.jpg',
-    link: '#',
+      "Take control of your logistics! Learn actionable strategies to optimize routes and boost efficiency.",
+    image: "/blog1 .jpg",
+    link: "#",
   },
   {
-    title: ' AI and Automation: The Next Era of Logistics',
-    date: 'March 25, 2025',
+    title: "AI and Automation: The Next Era of Logistics",
+    date: "March 25, 2025",
     description:
-      'Explore the transformative power of artificial intelligence and automation in shaping the future of supply chains.',
-    image: '/blog2.jpg',
-    link: '#',
+      "Explore the transformative power of artificial intelligence and automation in shaping the future of supply chains.",
+    image: "/blog2 .jpg",
+    link: "#",
   },
 ];
 
 export default function BlogSection() {
   return (
-    <Box sx={{ backgroundColor: '#f9fafb', py: 8 }}>
-      <Box sx={{ maxWidth: '1200px', mx: 'auto', px: 2, textAlign: 'center' }}>
-        <Typography variant="h4" fontWeight="bold" gutterBottom>
-          Our Blogs
-        </Typography>
+    <section className="bg-gray-50 py-16">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold text-gray-800">Our Blogs</h2>
 
-        <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
-            gap: 4,
-            mt: 4,
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
           {blogs.map((blog, index) => (
-            <Box
+            <div
               key={index}
-              sx={{
-                backgroundColor: '#fff',
-                borderRadius: 3,
-                boxShadow: 2,
-                overflow: 'hidden',
-                textAlign: 'left',
-                transition: 'box-shadow 0.3s',
-                '&:hover': { boxShadow: 6 },
-              }}
+              className="bg-white rounded-xl shadow-md overflow-hidden text-left transition-shadow duration-300 hover:shadow-xl"
             >
-              <Box
-                component="img"
+              <img
                 src={blog.image}
                 alt={blog.title}
-                sx={{ width: '100%', height: 250, objectFit: 'cover' }}
+                className="w-full h-64 object-cover"
               />
-              <Box sx={{ p: 3 }}>
-                <Typography variant="h6" fontWeight="600" gutterBottom>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   {blog.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {blog.date}
-                </Typography>
-                <Typography sx={{ mt: 1 }} variant="body1">
-                  {blog.description}
-                </Typography>
-              </Box>
-            </Box>
+                </h3>
+                <p className="text-sm text-gray-500">{blog.date}</p>
+                <p className="mt-3 text-gray-700">{blog.description}</p>
+              </div>
+            </div>
           ))}
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </section>
   );
 }
