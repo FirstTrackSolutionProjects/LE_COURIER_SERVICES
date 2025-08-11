@@ -1,433 +1,276 @@
-// import React, { useState } from 'react';
-
-// const ShippingCalculator = () => {
-//   const [boxes, setBoxes] = useState([
-//     { weight: '', unit: 'g', length: '', breadth: '', height: '', count: '' }
-//   ]);
-
-//   const addBox = () => {
-//     setBoxes([
-//       ...boxes,
-//       { weight: '', unit: 'g', length: '', breadth: '', height: '', count: '' }
-//     ]);
-//   };
-
-//   return (
-//     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-//       <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-4xl">
-//         <h2 className="text-2xl font-bold text-center mb-6">Calculate Your Shipping Price</h2>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-//           <div>
-//             <label className="block font-semibold">Shipping Method</label>
-//             <select className="w-full border rounded p-2">
-//               <option>Surface</option>
-//               <option>Air</option>
-//             </select>
-//           </div>
-
-//           <div>
-//             <label className="block font-semibold">Status</label>
-//             <select className="w-full border rounded p-2">
-//               <option>Forward</option>
-//               <option>Return</option>
-//             </select>
-//           </div>
-
-//           <div>
-//             <label className="block font-semibold">Origin Pincode</label>
-//             <input type="text" placeholder="Ex. 813210" className="w-full border rounded p-2" />
-//           </div>
-
-//           <div>
-//             <label className="block font-semibold">Destination Pincode</label>
-//             <input type="text" placeholder="Ex. 845401" className="w-full border rounded p-2" />
-//           </div>
-
-//           <div>
-//             <label className="block font-semibold">COD Amount</label>
-//             <input type="number" placeholder="0" className="w-full border rounded p-2" />
-//           </div>
-
-//           <div>
-//             <label className="block font-semibold">Payment Mode</label>
-//             <select className="w-full border rounded p-2">
-//               <option>COD</option>
-//               <option>Prepaid</option>
-//             </select>
-//           </div>
-
-//           <div>
-//             <label className="block font-semibold">Shipment Type</label>
-//             <select className="w-full border rounded p-2">
-//               <option>B2C</option>
-//               <option>B2B</option>
-//             </select>
-//           </div>
-
-//           <div>
-//             <label className="block font-semibold">Invoice Amount</label>
-//             <input type="number" placeholder="0" className="w-full border rounded p-2" />
-//           </div>
-//         </div>
-
-//         <div className="mt-6 space-y-4">
-//           {boxes.map((box, index) => (
-//             <div key={index} className="grid grid-cols-6 gap-2">
-//               <input
-//                 type="number"
-//                 placeholder="Weight"
-//                 className="col-span-1 border rounded p-2"
-//               />
-//               <select className="col-span-1 border rounded p-2">
-//                 <option>g</option>
-//                 <option>kg</option>
-//               </select>
-//               <input type="number" placeholder="L (cm)" className="col-span-1 border rounded p-2" />
-//               <input type="number" placeholder="B (cm)" className="col-span-1 border rounded p-2" />
-//               <input type="number" placeholder="H (cm)" className="col-span-1 border rounded p-2" />
-//               <input type="number" placeholder="Count" className="col-span-1 border rounded p-2" />
-//             </div>
-//           ))}
-
-//           <button
-//             onClick={addBox}
-//             className="text-green-600 flex items-center font-semibold mt-2"
-//           >
-//             <span className="text-xl mr-1">＋</span> Add More Boxes
-//           </button>
-//         </div>
-
-//         <div className="mt-6 text-center">
-//           <button className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600">
-//             Submit and Compare
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ShippingCalculator;
-
-// import React, { useState } from "react";
-
-// const ShippingCalculator = () => {
-//   const [showModal, setShowModal] = useState(false);
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault(); 
-//     setShowModal(true);
-//   };
-
-//   return (
-//     <div className="min-h-screen flex items-center justify-center p-6">
-//       <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-4xl w-full">
-//         <h2 className="text-4xl font-extrabold text-emerald-600 mb-8 border-b pb-4">
-//             Calculate Your Shipping Price
-//         </h2>
-
-//         {/* Form */}
-//         <form onSubmit={handleSubmit} className="space-y-8">
-//           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-//             {/* Shipping Method */}
-//             <div>
-//               <label className="block text-amber-700 font-semibold mb-2">Shipping Method</label>
-//               <select className="w-full p-3 border rounded-lg focus:ring-emerald-500">
-//                 <option>Surface</option>
-//                 <option>Air</option>
-//               </select>
-//             </div>
-
-//             {/* Status */}
-//             <div>
-//               <label className="block text-amber-700 font-semibold mb-2">Status</label>
-//               <select className="w-full p-3 border rounded-lg focus:ring-emerald-500">
-//                 <option>Forward</option>
-//                 <option>Return</option>
-//               </select>
-//             </div>
-
-//             {/* Origin Pincode */}
-//             <div>
-//               <label className="block text-amber-700 font-semibold mb-2">Origin Pincode</label>
-//               <input
-//                 type="text"
-//                 placeholder="Ex. 813210"
-//                 className="w-full p-3 border rounded-lg focus:ring-emerald-500"
-//               />
-//             </div>
-
-//             {/* Destination Pincode */}
-//             <div>
-//               <label className="block text-amber-700 font-semibold mb-2">Destination Pincode</label>
-//               <input
-//                 type="text"
-//                 placeholder="Ex. 845401"
-//                 className="w-full p-3 border rounded-lg focus:ring-emerald-500"
-//               />
-//             </div>
-
-//             {/* COD Amount */}
-//             <div>
-//               <label className="block text-amber-700 font-semibold mb-2">COD Amount</label>
-//               <input
-//                 type="number"
-//                 defaultValue={0}
-//                 className="w-full p-3 border rounded-lg focus:ring-emerald-500"
-//               />
-//             </div>
-
-//             {/* Payment Mode */}
-//             <div>
-//               <label className="block text-amber-700 font-semibold mb-2">Payment Mode</label>
-//               <select className="w-full p-3 border rounded-lg focus:ring-emerald-500">
-//                 <option>COD</option>
-//                 <option>Prepaid</option>
-//               </select>
-//             </div>
-
-//             {/* Shipment Type */}
-//             <div>
-//               <label className="block text-amber-700 font-semibold mb-2">Shipment Type</label>
-//               <select className="w-full p-3 border rounded-lg focus:ring-emerald-500">
-//                 <option>B2C</option>
-//                 <option>B2B</option>
-//               </select>
-//             </div>
-
-//             {/* Invoice Amount */}
-//             <div>
-//               <label className="block text-amber-700 font-semibold mb-2">Invoice Amount</label>
-//               <input
-//                 type="number"
-//                 defaultValue={0}
-//                 className="w-full p-3 border rounded-lg focus:ring-emerald-500"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Weight & Dimensions */}
-//           <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-//             <input
-//               type="number"
-//               placeholder="Weight"
-//               className="p-3 border rounded-lg col-span-2 focus:ring-emerald-500"
-//             />
-//             <select className="p-3 border rounded-lg focus:ring-emerald-500">
-//               <option>g</option>
-//               <option>kg</option>
-//             </select>
-//             <input
-//               type="number"
-//               placeholder="L (cm)"
-//               className="p-3 border rounded-lg focus:ring-emerald-500"
-//             />
-//             <input
-//               type="number"
-//               placeholder="B (cm)"
-//               className="p-3 border rounded-lg focus:ring-emerald-500"
-//             />
-//             <input
-//               type="number"
-//               placeholder="H (cm)"
-//               className="p-3 border rounded-lg focus:ring-emerald-500"
-//             />
-//             <input
-//               type="number"
-//               placeholder="Count"
-//               className="p-3 border rounded-lg focus:ring-emerald-500"
-//             />
-//           </div>
-
-//           {/* Action Buttons */}
-//           <div className="flex justify-between mt-8">
-//             <button
-//               type="button"
-//               className="px-6 py-3 border border-rose-500 text-rose-600 rounded-lg hover:bg-rose-100 transition"
-//             >
-//               ➕ Add More Boxes
-//             </button>
-//             <button
-//               type="submit"
-//               className="px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition"
-//             >
-//                Submit and Compare
-//             </button>
-//           </div>
-//         </form>
-
-//         {/* Modal */}
-//         {showModal && (
-//           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-//             <div className="bg-white p-8 rounded-lg shadow-xl w-96">
-//               <h3 className="text-xl font-bold mb-6 text-emerald-600">✅ Choose Your Service</h3>
-//               <button
-//                 className="px-6 py-3 bg-rose-500 text-white rounded-lg hover:bg-rose-600 transition w-full"
-//                 onClick={() => setShowModal(false)}
-//               >
-//                 Close
-//               </button>
-//             </div>
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ShippingCalculator;
-
 import React, { useState } from "react";
 
 const ShippingCalculator = () => {
-  const [boxes, setBoxes] = useState([{ id: 1 }]); // Initial box
+  const [formData, setFormData] = useState({
+    shippingMethod: "Surface",
+    status: "Forward",
+    originPincode: "",
+    destinationPincode: "",
+    codAmount: 0,
+    paymentMode: "COD",
+    shipmentType: "B2C",
+    invoiceAmount: 0,
+  });
 
-  // Function to add a new box
-  const addBox = () => {
-    setBoxes([...boxes, { id: boxes.length + 1 }]);
+  // Boxes state (array of box objects)
+  const [boxes, setBoxes] = useState([
+    { weight: "", weight_unit: "g", length: "", breadth: "", height: "", quantity: "" },
+  ]);
+
+  // Handle non-box inputs
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Function to remove a box by ID
-  const removeBox = (id) => {
-    setBoxes(boxes.filter((box) => box.id !== id));
+  // Handle changes in boxes array
+  const handleBoxes = (index, e) => {
+    const { name, value } = e.target;
+    const updatedBoxes = [...boxes];
+    updatedBoxes[index][name] = value;
+    setBoxes(updatedBoxes);
+  };
+
+  // Add a new box row
+  const addBox = () => {
+    setBoxes([...boxes, { weight: "", weight_unit: "g", length: "", breadth: "", height: "", quantity: "" }]);
+  };
+
+  // Remove a box row
+  const removeBox = (index) => {
+    const updatedBoxes = boxes.filter((_, i) => i !== index);
+    setBoxes(updatedBoxes);
+  };
+
+  // Submit handler
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Submitted:", { ...formData, boxes });
+    alert("Form submitted! Check console for data.");
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200 p-4">
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-5xl w-full">
-        <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">
+    <div className="flex justify-center p-6">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-gray-100 p-8 rounded-lg shadow-lg w-full max-w-2xl"
+      >
+        <h2 className="text-2xl font-semibold text-center mb-6">
           Calculate Your Shipping Price
         </h2>
 
-        {/* Form Fields */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Shipping Method */}
+        {/* Row 1 */}
+        <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
-            <label className="block text-gray-700 font-semibold">Shipping Method</label>
-            <select className="w-full p-2 border rounded-md focus:ring-emerald-500">
-              <option>Surface</option>
-              <option>Express</option>
+            <label className="block mb-1 font-medium">Shipping Method</label>
+            <select
+              name="shippingMethod"
+              value={formData.shippingMethod}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            >
+              <option value="Surface">Surface</option>
+              <option value="Air">Express</option>
             </select>
           </div>
-
-          {/* Status */}
           <div>
-            <label className="block text-gray-700 font-semibold">Status</label>
-            <select className="w-full p-2 border rounded-md focus:ring-emerald-500">
-              <option>Forward</option>
-              <option>RTO</option>
-              <option>Reverse</option>
+            <label className="block mb-1 font-medium">Status</label>
+            <select
+              name="status"
+              value={formData.status}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            >
+              <option value="Forward">RTO</option>
+              <option value="Reverse">Reverse</option>
             </select>
           </div>
+        </div>
 
-          {/* Origin Pincode */}
+        {/* Row 2 */}
+        <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
-            <label className="block text-gray-700 font-semibold">Origin Pincode</label>
+            <label className="block mb-1 font-medium">Origin Pincode</label>
             <input
               type="text"
+              name="originPincode"
               placeholder="Ex. 813210"
-              className="w-full p-2 border rounded-md focus:ring-emerald-500"
+              value={formData.originPincode}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
             />
           </div>
-
-          {/* Destination Pincode */}
           <div>
-            <label className="block text-gray-700 font-semibold">Destination Pincode</label>
+            <label className="block mb-1 font-medium">Destination Pincode</label>
             <input
               type="text"
+              name="destinationPincode"
               placeholder="Ex. 845401"
-              className="w-full p-2 border rounded-md focus:ring-emerald-500"
-            />
-          </div>
-
-          {/* COD Amount */}
-          <div>
-            <label className="block text-gray-700 font-semibold">COD Amount</label>
-            <input
-              type="number"
-              placeholder="0"
-              className="w-full p-2 border rounded-md focus:ring-emerald-500"
-            />
-          </div>
-
-          {/* Payment Mode */}
-          <div>
-            <label className="block text-gray-700 font-semibold">Payment Mode</label>
-            <select className="w-full p-2 border rounded-md focus:ring-emerald-500">
-              <option>COD</option>
-              <option>Prepaid</option>
-            </select>
-          </div>
-
-          {/* Shipment Type */}
-          <div>
-            <label className="block text-gray-700 font-semibold">Shipment Type</label>
-            <select className="w-full p-2 border rounded-md focus:ring-emerald-500">
-              <option>B2C</option>
-              <option>B2B</option>
-            </select>
-          </div>
-
-          {/* Invoice Amount */}
-          <div>
-            <label className="block text-gray-700 font-semibold">Invoice Amount</label>
-            <input
-              type="number"
-              placeholder="0"
-              className="w-full p-2 border rounded-md focus:ring-emerald-500"
+              value={formData.destinationPincode}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
             />
           </div>
         </div>
 
-  
-      
+        {/* Row 3 */}
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label className="block mb-1 font-medium">COD Amount</label>
+            <input
+              type="number"
+              name="codAmount"
+              value={formData.codAmount}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            />
+          </div>
+          <div>
+            <label className="block mb-1 font-medium">Payment Mode</label>
+            <select
+              name="paymentMode"
+              value={formData.paymentMode}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            >
+              <option value="COD">COD</option>
+              <option value="Prepaid">Prepaid</option>
+              <option value="Pickup">Pickup</option>
+            </select>
+          </div>
+        </div>
 
-        {/* Dynamically Added Boxes */}
-        {boxes.map((box) => (
-          <div key={box.id} className="overflow-x-auto">
-            <div className="grid grid-cols-2 md:grid-cols-7 gap-3 bg-gray-100 p-3 rounded-lg shadow mt-3 min-w-[240px] relative">
-              <input type="number" className="p-2 border rounded-md" placeholder="Weight" />
-              <select className="p-2 border rounded-md">
-                <option>g</option>
-                <option>kg</option>
-              </select>
-              <input type="number" className="p-2 border rounded-md" placeholder="L (cm)" />
-              <input type="number" className="p-2 border rounded-md" placeholder="B (cm)" />
-              <input type="number" className="p-2 border rounded-md" placeholder="H (cm)" />
-              <input type="number" className="p-2 border rounded-md" placeholder="Count" />
-              {boxes.length>1?<button
-                type="button"
-                onClick={() => removeBox(box.id)}
-                className="absolute top-[-8px] right-1 text-red-600 hover:text-red-800"
-              >
-                ❌
-              </button>:null}
+        {/* Row 4 */}
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label className="block mb-1 font-medium">Shipment Type</label>
+            <select
+              name="shipmentType"
+              value={formData.shipmentType}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            >
+              <option value="B2C">B2C</option>
+              <option value="B2B">B2B</option>
+            </select>
+          </div>
+          <div>
+            <label className="block mb-1 font-medium">Invoice Amount</label>
+            <input
+              type="number"
+              name="invoiceAmount"
+              value={formData.invoiceAmount}
+              onChange={handleChange}
+              className="mt-1 text-sm block w-full p-2 border border-gray-300 rounded-md"
+            />
+          </div>
+        </div>
+
+        {/* Boxes Section */}
+        {boxes.map((box, index) => (
+          <div
+            key={index}
+            className="relative grid grid-cols-2 sm:grid-cols-6 gap-4 p-2 mb-2 rounded-md bg-gray-200"
+          >
+            <div>
+              <label className="block text-sm font-medium">Weight</label>
+              <input
+                type="text"
+                name="weight"
+                placeholder="Ex. 1500"
+                value={box.weight}
+                onChange={(e) => handleBoxes(index, e)}
+                className="mt-1 text-sm block w-full p-2 border border-gray-300 rounded-md"
+              />
             </div>
+            <div>
+              <label className="block text-sm font-medium">W Unit</label>
+              <select
+                name="weight_unit"
+                value={box.weight_unit}
+                onChange={(e) => handleBoxes(index, e)}
+                className="mt-1 text-sm block w-full p-2 border border-gray-300 rounded-md"
+              >
+                <option value="g">g</option>
+                <option value="kg">kg</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium">L (cm)</label>
+              <input
+                type="text"
+                name="length"
+                placeholder="Ex. 2.5"
+                value={box.length}
+                onChange={(e) => handleBoxes(index, e)}
+                className="mt-1 text-sm block w-full p-2 border border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">B (cm)</label>
+              <input
+                type="text"
+                name="breadth"
+                placeholder="Ex. 2.5"
+                value={box.breadth}
+                onChange={(e) => handleBoxes(index, e)}
+                className="mt-1 text-sm block w-full p-2 border border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">H (cm)</label>
+              <input
+                type="text"
+                name="height"
+                placeholder="Ex. 2.5"
+                value={box.height}
+                onChange={(e) => handleBoxes(index, e)}
+                className="mt-1 text-sm block w-full p-2 border border-gray-300 rounded-md"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Count</label>
+              <input
+                type="text"
+                name="quantity"
+                placeholder="Ex. 2"
+                value={box.quantity}
+                onChange={(e) => handleBoxes(index, e)}
+                className="mt-1 text-sm block w-full p-2 border border-gray-300 rounded-md"
+              />
+            </div>
+
+            {boxes.length > 1 && (
+              <button
+                type="button"
+                className="absolute w-5 h-5 text-sm flex justify-center items-center top-0 right-0 border rounded-full bg-red-500 text-white"
+                onClick={() => removeBox(index)}
+              >
+                X
+              </button>
+            )}
           </div>
         ))}
 
-        {/* Buttons */}
-        <div className="flex justify-between mt-4 space-x-4">
+        <div className="mx-auto justify-center items-center flex">
           <button
             type="button"
+            className="m-2 px-2 md:px-5 py-2 text-sm md:text-base border border-green-600 rounded-3xl bg-white text-green-600"
             onClick={addBox}
-            className="px-4 py-2 border border-emerald-500 text-emerald-600 rounded-md hover:bg-emerald-100 transition"
           >
-            ➕ Add More Boxes
+            Add More Boxes
           </button>
           <button
             type="submit"
-            className="px-4 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition"
+            className="border bg-green-600 text-white mx-2 text-sm md:text-base py-2 md:px-4 px-2 rounded-3xl"
           >
             Submit and Compare
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
 
 export default ShippingCalculator;
-
 
