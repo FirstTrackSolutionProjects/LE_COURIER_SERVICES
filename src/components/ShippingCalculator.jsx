@@ -81,7 +81,8 @@ const ShippingCalculator = () => {
               onChange={handleChange}
               className="w-full border rounded p-2"
             >
-              <option value="Forward">RTO</option>
+              <option value="Forward">Forward</option>
+              <option value="RTO">RTO</option>
               <option value="Reverse">Reverse</option>
             </select>
           </div>
