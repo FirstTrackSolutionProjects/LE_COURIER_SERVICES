@@ -13,9 +13,13 @@ import Pricing from './pages/Pricing';
 import Tracking from './pages/Tracking';
 import ContactUs from './pages/ContactUs';
 
+import Dashboard from './components/Dashboard';
+import Verify from './pages/Verify';
+
 import FAQs from './components/FAQs';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfUse from './components/TermsOfUse';
+import { ToastContainer } from 'react-toastify';
 
 // ✅ Scroll to top on route change
 const ScrollToTop = () => {
@@ -33,7 +37,7 @@ const App = () => {
     <>
       <ScrollToTop />
       <Header />
-    
+      <ToastContainer />
 
       <div className="min-h-[calc(100vh-64px)] w-full overflow-hidden bg-white">
         <Routes>
@@ -48,7 +52,8 @@ const App = () => {
           <Route path="/faq" element={<FAQs />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
-         
+          <Route path='/dashboard/*' element={<Dashboard/>}></Route>
+          <Route path='/verify' element={<Verify/>}></Route>
         </Routes>
         <Footer />
       </div>

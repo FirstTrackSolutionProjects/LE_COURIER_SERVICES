@@ -81,17 +81,21 @@ const ContactUs = () => {
           <p className="mb-3">
             <strong>Working Hours:</strong> Mon-Fri: 9 AM - 6 PM
           </p>
-          
-        </div>
-      </div>
-          <a
+          {/* <a
           href="https://wa.me/919040170727"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
         >
-           <FaWhatsapp size={24} />
-        </a>
+           <FaWhatsapp size={24} /> +919876543210
+        </a>           */}
+          <p className='flex items-center gap-1'>
+            <FaWhatsapp size={24} /> +919876543210
+          </p>
+          
+        </div>
+      </div>
+          
           </div>
 
 
