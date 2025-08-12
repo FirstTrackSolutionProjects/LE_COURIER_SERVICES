@@ -2,31 +2,31 @@
 // constants/index.js
 import { FaTachometerAlt, FaWallet, FaHistory, FaUsers,FaFileAlt,FaMoneyBillAlt, FaChevronDown, FaChevronUp, FaBars, FaTimes, FaBox, FaDollyFlatbed, FaClipboardList, FaHouseUser, FaDoorOpen } from 'react-icons/fa';
 import { MdSettings } from 'react-icons/md';
-import VerificationRequests from "../Components/VerificationRequests"
-import DashHome from '../Components/DashHome';
-import MerchantManage from '../Components/MerchantManage';
-import AllInternationalParcels from '../Components/AllInternationalParcels';
-import AllParcels from '../Components/AllParcels';
-import AllShipmentReports from '../Components/AllShipmentReports';
-import AllTransactions from '../Components/AllTransactions';
-import ContactSubmissions from '../Components/ContactSubmissions';
-import CreateOrder from '../Components/CreateOrder';
-import ChangePassword from '../Components/ChangePassword';
-import CreateOrderInternational from '../Components/CreateOrderInternational';
-import InternationalReports from '../Components/InternationalReports';
-import ManualRecharge from '../Components/ManualRecharge';
-import NDR from '../Components/NDR';
-import NonVerifiedMerchantManage from '../Components/NonVerifiedMerchantManage';
-import Profile from '../Components/Profile';
-import TransactionHistory from '../Components/TransactionHistory';
-import UpdateOrder from '../Components/UpdateOrder';
-import UpdateOrderInternational from '../Components/UpdateOrderInternational';
-import Warehouse from '../Components/Warehouse';
-import UpdateProfileRequest from '../Components/UpdateProfileRequest';
-import UpdateProfileRequestSubmissions from '../Components/UpdateProfileRequestSubmissions';
-import WeightDisputes from '../Components/WeightDisputes';
-import PendingCancellations from '../Components/PendingCancellations/PendingCancellations';
-import PendingRefunds from '../Components/PendingRefunds/PendingRefunds';
+import VerificationRequests from "../components/VerificationRequests"
+import DashHome from '../components/DashHome';
+import MerchantManage from '../components/MerchantManage';
+import AllInternationalParcels from '../components/AllInternationalParcels';
+import AllParcels from '../components/AllParcels';
+import AllShipmentReports from '../components/AllShipmentReports';
+import AllTransactions from '../components/AllTransactions';
+import ContactSubmissions from '../components/ContactSubmissions';
+import CreateOrder from '../components/CreateOrder';
+import ChangePassword from '../components/ChangePassword';
+import CreateOrderInternational from '../components/CreateOrderInternational';
+import InternationalReports from '../components/InternationalReports';
+import ManualRecharge from '../components/ManualRecharge';
+import NDR from '../components/NDR';
+import NonVerifiedMerchantManage from '../components/NonVerifiedMerchantManage';
+import Profile from '../components/Profile';
+import TransactionHistory from '../components/TransactionHistory';
+import UpdateOrder from '../components/UpdateOrder';
+import UpdateOrderInternational from '../components/UpdateOrderInternational';
+import Warehouse from '../components/Warehouse';
+import UpdateProfileRequest from '../components/UpdateProfileRequest';
+import UpdateProfileRequestSubmissions from '../components/UpdateProfileRequestSubmissions';
+import WeightDisputes from '../components/WeightDisputes';
+import PendingCancellations from '../components/PendingCancellations/PendingCancellations';
+import PendingRefunds from '../components/PendingRefunds/PendingRefunds';
 
 export const Admincards = [
   {
