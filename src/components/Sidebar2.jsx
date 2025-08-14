@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext.jsx';
 import SidebarItem from './SidebarItem.jsx';
 import WalletRechargeModal from './WalletRechargeModal.jsx';
 const Sidebar2 = () => {
-  const {admin, logout} = useAuth();
+  const {admin, logout, name, isAuthenticated} = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +25,7 @@ const Sidebar2 = () => {
   },[navigate])
 
   const sidebarItems = menuItems
+
   return (
     <>
     {showRecharge ? <WalletRechargeModal onClose={closeRechargeModal} /> : null}
@@ -61,6 +62,14 @@ const Sidebar2 = () => {
         >
           <FaTimes className="h-7 w-7 " /> {/* Close icon */}
         </button>
+
+         {/* Username section */}
+          {isAuthenticated && (
+            <div className="px-4 py-2 border-b border-gray-600 font-semibold text-lg">
+              Hi, {name}
+            </div>
+          )}
+          
         <ul className="p-4 ">
         {sidebarItems.map((item) => {
           if ((item.admin && !admin) || (item.merchantOnly && admin)) {

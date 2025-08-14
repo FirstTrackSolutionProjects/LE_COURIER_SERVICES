@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -33,10 +33,24 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    !!localStorage.getItem('token')
+  );
+
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // token clear
+    setIsAuthenticated(false);        // logout state
+    console.log('User logged out');
+  };
+
   return (
     <>
       <ScrollToTop />
-      <Header />
+      <Header 
+        isAuthenticated={isAuthenticated} 
+        setIsAuthenticated={setIsAuthenticated} 
+        handleLogout={handleLogout} 
+      />
       <ToastContainer />
 
       <div className="min-h-[calc(100vh-64px)] w-full overflow-hidden bg-white">

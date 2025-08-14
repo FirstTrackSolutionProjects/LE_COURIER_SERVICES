@@ -1,7 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { FaDoorOpen } from "react-icons/fa";
+const Sidebar = ({ isOpen, setIsOpen, 
+  isAuthenticated, handleLogout }) => {
+  const navigate = useNavigate();
 
-const Sidebar = ({ isOpen, setIsOpen }) => {
+   const onShipRunwayClick = () => {
+    handleLogout(); 
+    setIsOpen(false); 
+    navigate('/'); 
+  };
+
   return (
     <div
       className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-40 ${
@@ -21,7 +30,20 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         <Link to="/about-us" onClick={() => setIsOpen(false)}>About</Link>
          <Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
         <Link to="/contact-us" onClick={() => setIsOpen(false)}>Contact</Link>
-         <Link to="/sign-in" onClick={() => setIsOpen(false)}>Sign In</Link>
+
+          {isAuthenticated ? (
+          <button
+            onClick={onShipRunwayClick}
+            className="flex items-center justify-between w-full px-3 py-2 bg-gray-100 rounded-lg hover:bg-gray-200"
+          >
+            <span className="font-medium text-gray-800">Ship Runway</span>
+          <span className="bg-red-500 p-2 rounded-xl">
+            <FaDoorOpen className="text-white text-lg" />
+          </span>
+          </button>
+        ) : (
+          <Link to="/sign-in" onClick={() => setIsOpen(false)}>Sign In</Link>
+        )}
       </nav>
     </div>
   );
