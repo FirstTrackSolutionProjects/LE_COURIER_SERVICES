@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4">
             <h3 className="text-xl font-bold mb-4 hover:underline">Contact Us</h3>
             <p className="mb-2 pr-4">
-             Address: 19, Nav Vyapar Bhavan, 45 PD Mello Road,<br/> Next to ICICI Bank, Masjid East, Mumbai-400009, Maharashtra
+             Address: Office No. 110, Bharat Chambars, Baroda Street Back Side Masjid Bundar East, Mumbai- 400009
             </p>
             <p className="mt-3 mb-8 md:-mb-4">Email: info@shiprunway.com</p>
           </div>

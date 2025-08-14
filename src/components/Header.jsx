@@ -37,6 +37,12 @@ const [balance, setBalance] = useState(0.00);
         fetchBalance();
     }
   }, [isAuthenticated]);
+  
+  const handleLogout = () => {
+  localStorage.removeItem('token'); 
+  logout(); // from useAuth context
+  console.log("User logged out");
+};
 return (
     <>
     {showRecharge ? <WalletRechargeModal onClose={closeRechargeModal} /> : null}
@@ -82,10 +88,19 @@ return (
             <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
         </Link>
 
-        <Link to="/sign-in" className="relative group">
-            <span className="hover:text-blue-600">Sign In</span>
+          {isAuthenticated && (
+            <Link to="/dashboard" className="relative group">
+            <span className="hover:text-blue-600">Dashboard</span>
             <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </Link>
+            </Link>
+        )}
+
+        {!isAuthenticated && (
+            <Link to="/sign-in" className="relative group">
+              <span className="hover:text-blue-600">Sign In</span>
+              <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          )}
         </nav>
         <div className='md:hidden' onClick={()=>setShowRecharge(true)}>
           {verified && location.pathname.startsWith('/dashboard')? (<>
@@ -110,6 +125,7 @@ return (
           </div>:null}
 
 
+
         {/* Mobile menu toggle */}
         <button
           className="md:hidden text-gray-700 text-4xl"
@@ -121,7 +137,13 @@ return (
       </div>
 
       {/* Sidebar (Mobile) */}
-      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+     <Sidebar
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        isAuthenticated={isAuthenticated}
+        handleLogout={handleLogout} // yeh line important hai
+        />
+
     </header>
     </>
   );
