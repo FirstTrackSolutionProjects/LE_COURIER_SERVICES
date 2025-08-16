@@ -90,7 +90,7 @@ const ContactUs = () => {
            <FaWhatsapp size={24} /> +919876543210
         </a>           */}
           <p className='flex items-center gap-1'>
-            <FaWhatsapp size={24} /> +919876543210
+            <FaWhatsapp size={24} /> +91 1234567890
           </p>
           
         </div>
