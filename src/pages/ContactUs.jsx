@@ -70,7 +70,7 @@ const ContactUs = () => {
         <div className="bg-blue-900 text-white rounded-xl shadow-md p-6">
           <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
           <p className="mb-3">
-            <strong>Address:</strong> 19, Nav Vyapar Bhavan, 45 PD Mello Road,<br/> Next to ICICI Bank, Masjid East, Mumbai-400009
+            <strong>Address:</strong> Office No. 110, Bharat Chambars, <br/>Baroda Street Back Side Masjid Bundar East, Mumbai- 400009
           </p>
           <p className="mb-3">
             <strong>Phone:</strong> +91 1234567890

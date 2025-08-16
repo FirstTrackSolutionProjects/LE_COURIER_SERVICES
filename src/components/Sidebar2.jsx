@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext.jsx';
 import SidebarItem from './SidebarItem.jsx';
 import WalletRechargeModal from './WalletRechargeModal.jsx';
 const Sidebar2 = () => {
-  const {admin, logout} = useAuth();
+  const {admin, logout, name, isAuthenticated} = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +25,7 @@ const Sidebar2 = () => {
   },[navigate])
 
   const sidebarItems = menuItems
+
   return (
     <>
     {showRecharge ? <WalletRechargeModal onClose={closeRechargeModal} /> : null}
